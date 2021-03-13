@@ -1,0 +1,233 @@
+body{
+    font-family: script-mj-bold;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+
+    &::before{
+        content: "";
+        position: fixed;
+        background: #024759 top right no-repeat; //can place an image if you want
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+}
+
+.navy{
+    background-color: #024759;
+}
+
+$primary-color: cyan;
+$secondary-color: #05FF00;
+$third-color: #FF19C2;
+$fourth-color: #00b4ff;
+$fifth-color: #18D26E;
+$sixth-color: #024759;
+
+a{
+    color: $primary-color;
+    text-decoration: none;
+    transition: .5s;
+    &:hover{
+        color: $fifth-color;
+        text-decoration: none;
+    }
+}
+
+// THE LANDING PAGE
+#landing{
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-james-wheeler-417074.jpg&fm=jpg") top right;
+    background-size: cover;
+    position: relative;
+
+    .container{
+        margin-bottom: 50px;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &::before{
+        content: "";
+        background: rgba(0,0,0, 0.25);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .landing-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    h1{
+        margin: 0 0 10px 0;
+        font-size: 64px;
+        font-family: script-mj-bold;
+        color: $fifth-color;
+    }
+    h2{
+        color: #eee;
+        margin-bottom: 50px;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .btn-scroll{
+        transition: .5s;
+        color: $primary-color;
+
+        i{
+            font-size: 48px;
+        }
+
+        &:hover{
+            color: $fifth-color;
+        }
+    }
+}
+
+//Skills
+
+.skills{
+    .section-title{
+        color: $fifth-color;
+    }
+
+    .progress{
+        height: 60px;
+        display: block;
+        background: none;
+        border-radius: 0;
+        
+        .skill{
+            padding: 10px 0;
+            margin: 0;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 500;
+            font-family: sans-serif;
+            color: $primary-color;
+
+            .val{
+                float: right;
+                font-style: normal;
+            }
+        }    
+    }
+
+    .progress-bar-wrap{
+        background: lightgray;
+    }
+
+    .progress-bar{
+        height: 10px;
+        background: linear-gradient(to right, $fifth-color, $primary-color, $fifth-color);
+    }
+}
+
+//Resume
+.resume{
+    .section-title{
+        h2{
+            color: $fifth-color;
+        }
+        p{
+            color: #fff;
+        }
+    }
+
+    .resume-title{
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: $fifth-color;
+    }
+
+    .resume-item{
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid $primary-color;
+        position: relative;
+        
+        
+
+        h4{
+            line-height: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: script-mj-bold;
+            color: $primary-color;
+            margin-bottom: 10px;
+        }
+        h5{
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            display: inline-block;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        ul{
+            padding-left: 20px;
+            
+            li{
+                padding-bottom: 0;
+            }
+        }
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50px;
+            left: -9px;
+            top: 0;
+            background: $sixth-color;
+            border: 2px solid $primary-color;
+        }
+    }
+}
+
+#portfolio{
+    .card{
+        background: rgba(255, 255, 255, 0.2);
+
+        button{
+            background: rgba(255, 255, 255, 0);
+        }
+    }
+    .card-body{
+        color: white;
+    }
+    p{
+        color: black;
+    }
+}
